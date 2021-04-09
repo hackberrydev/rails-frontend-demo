@@ -6,6 +6,8 @@ ruby "2.7.2"
 gem "rails", "~> 6.0.3", ">= 6.0.3.6"
 
 gem "bootsnap", ">= 1.4.2", :require => false
+gem "bootstrap", "~> 4.0"
+gem "jquery-rails"
 gem "puma", "~> 4.1"
 gem "sass-rails", ">= 6"
 gem "sqlite3", "~> 1.4"
