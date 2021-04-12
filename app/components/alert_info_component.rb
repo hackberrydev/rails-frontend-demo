@@ -1,3 +1,4 @@
 # frozen_string_literal: true
 
-class AlertInfoComponent < ViewComponent::Base; end
+class AlertInfoComponent < ViewComponent::Base
+end
