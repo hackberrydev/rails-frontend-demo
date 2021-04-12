@@ -4,4 +4,15 @@
   Welcome to Rails Frontend Demo project.
 <% end %>
 
-<%= render(SearchComponent.new) %>
+<%= render(RecipesComponent.new) do |c| %>
+  <% @recipes.each do |r| %>
+    <%= c.recipe(
+      :title      => r.title,
+      :subtitle   => r.subtitle,
+      :link_title => "See more",
+      :link_href  => "#"
+    ) do %>
+      <%= r.description %>
+    <% end %>
+  <% end %>
+<% end %>
