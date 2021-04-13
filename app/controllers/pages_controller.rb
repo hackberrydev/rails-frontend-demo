@@ -1,3 +1,5 @@
 class PagesController < ApplicationController
-  def main; end
+  def main
+    @recipes = Array.new(6, Recipe.new)
+  end
 end

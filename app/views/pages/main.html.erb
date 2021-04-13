@@ -1,5 +1,18 @@
 <h1>Welcome</h1>
 
-<div class="alert alert-info" role="alert">
+<%= render(AlertInfoComponent.new) do %>
   Welcome to Rails Frontend Demo project.
-</div>
+<% end %>
+
+<%= render(RecipesComponent.new) do |c| %>
+  <% @recipes.each do |r| %>
+    <%= c.recipe(
+      :title      => r.title,
+      :subtitle   => r.subtitle,
+      :link_title => "See more",
+      :link_href  => "#"
+    ) do %>
+      <%= r.description %>
+    <% end %>
+  <% end %>
+<% end %>
