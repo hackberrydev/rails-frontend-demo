@@ -1,7 +1,17 @@
-<div>
-  <%= search %>
+<div class="container">
+  <div class="row">
+    <div class="col-xl">
+      <%= search %>
+    </div>
+  </div>
 
-  <% recipes.each do |recipe| %>
-    <%= recipe %>
+  <% recipes.each_slice(3) do |row| %>
+    <div class="row">
+      <% row.each do |recipe| %>
+        <div class="col-sm mb-3">
+          <%= recipe %>
+        </div>
+      <% end %>
+    </div>
   <% end %>
 </div>
